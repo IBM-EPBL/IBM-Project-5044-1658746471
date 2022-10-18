@@ -12,7 +12,7 @@ def registerHandler():
         
         data["name"] = request.form.get("name")
         data["email"] = request.form.get("email")
-        data["pno"] = request.form.get("pno")
+        data["phone"] = request.form.get("phone")
         
         return render_template("success.html", data=data)
 
