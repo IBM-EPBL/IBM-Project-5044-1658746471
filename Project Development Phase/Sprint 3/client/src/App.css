@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "serif";
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Login */
+.login {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100vh;
+  background: url("./Images/background.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.login #left-section {
+  width: 100%;
+  height: 100vh;
+  /* background: url("./Images/background.jpg") no-repeat center center;
+  background-size: 100% 100%; */
+}
+
+.login #right-section {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+.login #right-section form {
+  padding: 1rem;
+  border-radius: 10px;
+  width: 350px;
+}
+.login #right-section h2 {
+  margin-bottom: 2rem;
+}
+
+.form-details {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-details label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-details input {
+  width: 100%;
+  display: block;
+  padding: 0.35rem 1rem;
+  font-size: 1rem;
+  outline: 0;
+  border: 0;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.form-details input.error {
+  border: crimson 1px solid;
+}
+#right-section form button {
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: block;
+  margin: 1.5rem 0;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  border-radius: 3px;
+  background: #333;
+  color: #fff;
+}
+
+p.error {
+  color: crimson;
+  font-size: 0.85rem;
+  margin: 0.4rem 0;
+}
+
+.navbar {
+  height: 70px;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+}
+
+.navbar .details {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .details p {
+  padding: 0 1.5rem;
+}
+
+.navbar .details button {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: #fff;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.t-container {
+  background: #ccc;
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.bdrop {
+  background: rgb(104, 103, 103);
+}
+
+.t-container .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(90, 89, 89, 0.436);
+}
+.t-container .wrapper .view-msg,
+.t-container .wrapper .complaint {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background-color: #fff;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  padding: 2rem;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.t-container .complaint {
+  width: 500px;
+}
+
+.t-container .complaint h3 {
+  margin-bottom: 1rem;
+}
+
+.t-container .complaint button {
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: block;
+  margin: 1.5rem 0;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  border-radius: 3px;
+  background: #333;
+  color: #fff;
+}
+
+.t-container .view-msg i,
+.t-container .complaint i {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.t-container .table-container {
+  width: 85%;
+  margin: 4rem 0 0 0;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.table-container .header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-container .header .new-complaint {
+  cursor: pointer;
+}
+
+.table-container .header h2 {
+  margin-bottom: 0.55rem;
+}
+
+.table-container .header p {
+  color: rgb(161, 160, 160);
+}
+.table-container .header button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  border-radius: 3px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.table-container .header button i {
+  margin-right: 0.5rem;
+}
+
+.table-container table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.table-container table tr {
+  border-radius: 1rem;
+}
+
+.table-container table td,
+.table-container table th {
+  padding: 8px;
+}
+
+.table-container table td {
+  color: #000;
+  font-weight: 500;
+}
+
+.table-container table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.table-container table tbody tr:hover {
+  cursor: pointer;
+  background-color: rgb(222, 222, 222);
+}
+
+.table-container table tr th:nth-of-type(4),
+.table-container table tr th:nth-of-type(5),
+.table-container table tr th:nth-of-type(6),
+.table-container table tr th:nth-of-type(7) {
+  text-align: center;
+}
+
+.table-container table tr td:nth-of-type(4),
+.table-container table tr td:nth-of-type(5),
+.table-container table tr td:nth-of-type(6),
+.table-container table tr td:nth-of-type(7){
+  text-align: center;
+}
+
+.table-container table tbody tr td:first-child {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.table-container table tbody tr td:last-child {
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.table-container table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: rgb(161, 160, 160);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.table-container table tr td button {
+  border: 0;
+  outline: 0;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.table-container table tr td .status-a {
+  color: #2a9d8f;
+  border: 1px solid #2a9d8f;
+  background-color: #c9f6f1;
+  font-weight: 550;
+}
+
+.table-container table tr td .status-n {
+  /* color: #dc143c;
+  border: 1px solid #dc143c; */
+  color: #efa825;
+  border: 1px solid #efa825;
+  background-color: #f6e6ca;
+  font-weight: 550;
+}
+
+.table-container table tr td .msg {
+  color: #f4a261;
+  border: 1px solid #f4a261;
+  background-color: #f9ebdf;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+.popup{
+  position:absolute;
+  top:15%;
+  left:auto;
+  padding:2rem 2.5rem;
+  color:#fff;
+  background: red;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.popup i{
+  position: absolute;
+  top:1rem;
+  right:1rem;
+  cursor: pointer;
+}
+.popup p{
+  text-align: center;
+}
+
+.popup.error{
+  background: crimson;
+}
+
+.popup.success{
+  background: rgb(21, 200, 21);
+}
