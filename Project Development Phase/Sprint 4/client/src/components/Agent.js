@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import AdminTable from "./AdminTable";
+import AgentTable from "./AgentTable";
 
-const AdminDashboard = () => {
+const Agent = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user === null) {
       navigate("/");
     } else {
-      if (user["adminId"] === undefined) navigate("/");
+      if (user["agentId"] === undefined) navigate("/");
     }
   }, []);
   return (
     <>
       <Navbar />
-      <AdminTable />
+      <AgentTable />
     </>
   );
 };
 
-export default AdminDashboard;
+export default Agent;
