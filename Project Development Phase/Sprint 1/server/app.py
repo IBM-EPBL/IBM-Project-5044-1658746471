@@ -24,7 +24,7 @@ users = [
 @app.route("/greet", methods=["GET"])
 def greeting():
     print("Called")
-    return jsonify({ "message": "Welcome to TNEB text prediction model" })
+    return jsonify({ "message": "Customer Care Registry" })
 
 def isEmpty(field):
     if field == "":
